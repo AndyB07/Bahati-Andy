@@ -1,0 +1,73 @@
+<html>
+<head>
+<center><h1>LOGIN  FORM</h1></center> 
+<style>
+body{
+background-color:aquamarine;    
+}  
+</style>  
+<title>LOGIN FORM</title>
+<script>
+function validate(){
+if(document.form1.name.value==""){
+alert("Please fill the name.");
+document.form1.name.focus();
+return false;   
+}
+else if(document.form1.address.value==""){
+alert("Please fill the address.");
+document.form1.address.focus();
+return false;     
+}
+else if(document.form1.email.value==""){
+alert("Please fill the email.");
+document.form1.email.focus();
+return false;
+}
+else if(document.form1.password.value==""){
+alert("Please fill the password.");
+document.form1.password.focus();
+return false;}  
+else if(document.form1.college.value==""){
+alert("Please fill the college.");
+document.form1.college.focus();
+return false;         
+}
+else if(document.form1.password.value.length<6){
+alert("password must be atleast 6 characters.");
+document.form1.password.focus();
+return false;
+}
+else if(document.form1.check.checked==""){
+alert("you must click on checkbox");
+document.form1.check.focus();
+return false;
+}
+}       
+</script>    
+</head>
+<body>
+<form method="post" name="form1" onsubmit="return validate()">      
+NAME:<br>
+<input type="name" name="name" placeholder="Enter your full name" ><br>
+Address:<br>
+<input type="address" name="address" placeholder="Enter your address" ><br>
+E-mail Address:<br>
+<input type="email" name="email" placeholder="Enter your email"><br>
+Password:<br>
+<input type="password" name="password"><br>
+Select Your Course:<br>
+<select id="select">
+<option value="Course1">RWANDA</option>
+<option value="Course2">UGANDA</option>
+<option value="Course3">KENYA</option>
+<option value="Course4">TANZANIA</option>
+</select><br>    
+College Name:<br>
+<textarea cols=20 rows=3 name="college" ></textarea><br>
+<input type="checkbox" name="check">I agree to the above information<br>
+<button type="submit">Send</button>&nbsp<button type="reset">Reset</button> 
+</form>
+</body>
+</html>
+    
